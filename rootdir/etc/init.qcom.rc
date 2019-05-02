@@ -86,6 +86,8 @@ on init
     chown system system /dev/stmvl6180_ranging
     symlink /dev/input/event2 /dev/stm_sensor
 
+    # Klapse
+    write /sys/klapse/enable_klapse 0
 
     # Congigure Simple Thermal driver
     write /sys/kernel/msm_thermal/zone0 "1555200 1536000 40 38"
