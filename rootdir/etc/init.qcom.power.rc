@@ -172,3 +172,14 @@ on charger
     write /sys/devices/soc.0/f9824900.sdhci/clkgate_enable 1
     write /sys/devices/soc.0/f9824900.sdhci/hibern8_on_idle_enable 1
     write /sys/module/lpm_levels/parameters/sleep_disabled N
+    start thermal-engine
+
+
+#Poweroff Charging
+on property:init.svc.recovery=running
+
+service charger /sbin/chargeonlymode
+    class charger
+    group system graphics
+    seclabel u:r:charger:s0
+
