@@ -24,6 +24,9 @@ $(call inherit-product, device/oneplus/oneplus2/device.mk)
 # Inherit some common Xtended stuff.
 $(call inherit-product, vendor/xtended/config/common_full_phone.mk)
 
+# Official!!!
+XTENDED_BUILD_TYPE := OFFICIAL
+
 # Bootanimation
 TARGET_BOOT_ANIMATION_RES := 1080
 
